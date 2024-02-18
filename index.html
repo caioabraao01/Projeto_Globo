@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="icon" href="img/globo1.png">
+    <title>Projeto Globo</title>
+</head>
+<body>
+
+    <img class="profile-image" src="img/globo.png">
+    <img class="profile-image-bottom-right" src="img/cia.png">
+
+
+    <button onclick="openModal('modal1')">Sobre Mim</button>
+    <button onclick="openModal('modal2')">Item 1</button>
+    <button onclick="openModal('modal3')">Item 2</button>
+    <button onclick="openModal('modal4')">Item 3</button>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <b><h3 id="nomes">CAIO ABRAÃO OLIVEIRA ROCHA</h3></b>
+            <br>
+            <p>Olá, meu nome é Caio Abraão Oliveira Rocha, tenho 20 anos e moro no bairro de Inhaúma, no Rio de Janeiro. Concluí o ensino médio profissionalizante em Informática na Escola Técnica Estadual República, pela FAETEC. Atualmente, estou cursando Engenharia de Software na UniCesumar. Moro com meus pais, meu irmão e minha irmã. </p>
+            <p> Minha paixão pela tecnologia vem desde pequeno, quando via meu pai, que também é desta área, desenvolvendo aplicações. Tive a oportunidade de estudar em uma escola técnica na qual tinha a opção de cursar informática. A partir daí, recebi o incentivo dos meus pais para começar minha carreira na área da tecnologia. Fiz meu ensino médio técnico, onde comecei a ter uma noção do que era tecnologia, aprendendo diversas linguagens e colocando em prática. Inicialmente, aprendi as coisas básicas, e depois comecei a me apaixonar cada vez mais por essa área, aprofundando-me por conta própria, fazendo cursos mais complexos e me capacitando para o futuro. Aprendi linguagens como HTML, CSS, JavaScript, Java, PHP, Bootstrap, entre outras. Quando terminei meu ensino médio, decidi fazer a faculdade de Engenharia de Software, a qual venho cada dia mais me identificando dentro da Tecnologia da Informação.
+   </p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h3 id="nomes">Aprendizados importantes sobre convivermos com a diferença</h3>
+            <br>
+            <p>Participei de um projeto de ação social promovido pela minha igreja, onde tive a oportunidade de trabalhar diretamente com moradores de rua da comunidade local. A igreja estava comprometida em oferecer assistência, alimentação e apoio espiritual a esses indivíduos. No início, a interação com os moradores de rua apresentou desafios, pois suas realidades eram diferentes das minhas experiências anteriores. Muitos deles enfrentavam problemas como falta de moradia, dependência química e histórias de vida marcadas por dificuldades. Com o passar das horas, essa experiência me proporcionou aprendizados significativos, pois percebi a importância da empatia e da abordagem não julgadora; cada morador de rua tinha uma história diferente. Além disso, aprendi a valorizar as pequenas vitórias e progressos. Muitos moradores de rua enfrentavam desafios diários, e mesmo assim continuavam sorrindo e não desistiam. A experiência também destacou a importância da inclusão e do respeito à autonomia.</p>
+
+            <p>Ao final do projeto, não apenas fornecemos assistência prática, mas também estabelecemos conexões genuínas. Essa vivência mostrou-me que, por trás das circunstâncias adversas, cada pessoa possui dignidade e potencial para transformação. Esse trabalho de ação social na igreja não apenas impactou positivamente a vida dos moradores de rua, mas também influenciou profundamente minha perspectiva sobre a importância da compaixão, solidariedade e aceitação na construção de uma sociedade mais justa e inclusiva.</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h3 id="nomes">Como você acredita que participar do 5/ 6 Programa terá um papel importante na sua história profissional?</h3>
+            <br>
+            <p>Eu acredito que participar do Programa será muito importante para o meu crescimento profissional. Além disso, a interação com profissionais experientes e mentores dentro do programa me permitirá obter bons resultados e as melhores práticas.</p>
+            <p>O Programa também é reconhecido por sua rede de contatos e oportunidades de networking. Participar dessas atividades proporcionará conexões importantes que podem abrir portas para futuras colaborações e oportunidades de carreira. Acredito que o Programa oferece um ambiente propício para o desenvolvimento de habilidades práticas, aprendizado contínuo e construção de uma rede profissional sólida, contribuindo assim de forma significativa para o meu crescimento profissional.</p>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h3 id="nomes">O que você acredita que seja sua maior contribuição para sua liderança e colegas de trabalho?</h3>
+            <br>
+            <p>Acredito que minha maior contribuição seja a combinação única de minhas habilidades técnicas, habilidades interpessoais e capacidade de liderança que me permite desempenhar um papel efetivo na equipe e contribuir para o sucesso da organização. Além disso, minha abordagem colaborativa e habilidades interpessoais me permitem trabalhar efetivamente em equipe. Eu valorizo a comunicação clara, estou aberto a ouvir as ideias dos outros e a colaborar para encontrar soluções inovadoras. Acredito que um ambiente de trabalho positivo e colaborativo é essencial para o sucesso de qualquer equipe.</p>
+            <p>Quanto à liderança, busco assumir responsabilidades e incentivar a motivação da equipe. Sou proativo na resolução de problemas e encorajo meus colegas a atingirem seu melhor potencial. Me permito liderar e ser liderado, contribuindo para um ambiente de trabalho dinâmico e produtivo.</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function () {
+        
+            var modais = document.querySelectorAll('.modal');
+            modais.forEach(function (modal) {
+                modal.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
